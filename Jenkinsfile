@@ -5,8 +5,7 @@ pipeline {
         stage('build') {
             agent {
                 docker { 
-                    image 'node:18-alpine' 
-                    args '--user 1000:1000'  // Run container as a non-root user
+                    image 'node:18-alpine'
                 }
             }
             steps {
